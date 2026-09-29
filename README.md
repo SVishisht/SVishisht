@@ -33,7 +33,7 @@ Currently working on projects involving AI infrastructure, full-stack applicatio
 ## Experience
 
 **Founding Engineer — AlphaZoom**  
-*Jul 2026 – Sep 2026 · Stealth Mode*
+*Jul 2026 – Sep 2026 · Stealth Mode Startup*
 
 Worked on a B2B SaaS platform for Generative Engine Optimization.
 
