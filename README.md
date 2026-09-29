@@ -56,7 +56,6 @@ Worked on semantic search and RAG for querying legal documents, previous matters
 
 `Python` `LangChain` `LLMs` `RAG` `Semantic Search`
 
-[Project storyboard →](storyboards/ashlar-law/)
 
 ---
 
@@ -67,7 +66,6 @@ Worked on an MCDM + machine learning framework for climate-risk decision making,
 
 `Python` `XGBoost` `Random Forest` `SHAP` `MCDM`
 
-[Project storyboard →](storyboards/teri/)
 
 ---
 
@@ -78,7 +76,6 @@ Worked on a local biomedical RAG pipeline using biomedical databases, combining 
 
 `Python` `LangChain` `FAISS` `Llama2` `BioChatter`
 
-[Project storyboard →](storyboards/iiitd/)
 
 ---
 
