@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="298" viewBox="0 0 880 298" xml:space="preserve">
+<defs>
+  <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="880" y2="0" spreadMethod="reflect">
+    <stop offset="0" stop-color="#58a6ff"/><stop offset="0.5" stop-color="#bc8cff"/><stop offset="1" stop-color="#ff7b72"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="0 0;880 0" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <clipPath id="clip"><rect x="1" y="34" width="878" height="263"/></clipPath>
+</defs>
+<style>
+  text{font-family:'Geist Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:14px;white-space:pre}
+  .fade{opacity:0;animation:fade .25s ease-out forwards}
+  .rise{opacity:0;animation:rise .35s ease-out forwards}
+  .cur{opacity:0}
+  .blink{opacity:0;animation:fade .01s forwards,blink 1s step-end infinite}
+  @keyframes fade{to{opacity:1}}
+  @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @keyframes vis{0%,100%{opacity:1}}
+  @keyframes blink{50%{opacity:0}}
+  @keyframes m1{from{transform:translateX(0)}to{transform:translateX(92.4px)}}@keyframes m2{from{transform:translateX(0)}to{transform:translateX(50.4px)}}
+</style>
+<rect x="0.5" y="0.5" width="879" height="297" rx="10" fill="#FBFAF7" stroke="#DCD9D0"/>
+<path d="M0.5 34 V10.5 a10 10 0 0 1 10 -10 H869.5 a10 10 0 0 1 10 10 V34 Z" fill="#ECEAE3"/>
+<line x1="0.5" y1="34" x2="879.5" y2="34" stroke="#DCD9D0"/>
+<circle cx="20" cy="17" r="5" fill="#C9C6BD"/><circle cx="38" cy="17" r="5" fill="#C9C6BD"/><circle cx="56" cy="17" r="5" fill="#C9C6BD"/>
+<text x="440.0" y="22" fill="#6E6B64" text-anchor="middle" style="font-size:12px">~/vishisht — zsh</text>
+<g clip-path="url(#clip)">
+<g class="fade" style="animation-delay:0.30s"><text x="24" y="64" fill="#FA692E" textLength="8.4" lengthAdjust="spacing" >$</text></g>
+<text x="40.8" y="64" fill="#161616" textLength="92.4" lengthAdjust="spacing" >cat now.txt</text>
+<rect x="40.8" y="50" width="100.8" height="20" fill="#FBFAF7" style="animation:m1 0.69s steps(11) 0.50s both"/>
+<rect class="cur" x="40.8" y="51" width="8.4" height="17" fill="#FA692E" style="animation:m1 0.69s steps(11) 0.50s both,vis 0.69s step-end 0.50s"/>
+<g class="fade" style="animation-delay:1.49s"><text x="40.8" y="88" fill="#6E6B64" textLength="554.4" lengthAdjust="spacing" >building AI infrastructure, full-stack apps and LLM-based systems.</text></g>
+<g class="fade" style="animation-delay:1.74s"><text x="40.8" y="108" fill="#6E6B64" textLength="470.4" lengthAdjust="spacing" >most recently: founding engineer @ AlphaZoom (GEO SaaS).</text></g>
+<g class="fade" style="animation-delay:2.39s"><text x="24" y="148" fill="#FA692E" textLength="8.4" lengthAdjust="spacing" >$</text></g>
+<text x="40.8" y="148" fill="#161616" textLength="50.4" lengthAdjust="spacing" >whoami</text>
+<rect x="40.8" y="134" width="58.8" height="20" fill="#FBFAF7" style="animation:m2 0.50s steps(6) 2.59s both"/>
+<rect class="cur" x="40.8" y="135" width="8.4" height="17" fill="#FA692E" style="animation:m2 0.50s steps(6) 2.59s both,vis 0.50s step-end 2.59s"/>
+<g class="fade" style="animation-delay:3.39s"><text x="40.8" y="168" fill="#B24A1C" textLength="33.6" lengthAdjust="spacing" >role</text><text x="124.80000000000001" y="168" fill="#161616" textLength="378.0" lengthAdjust="spacing" >final-year CSE @ VIT Vellore · bioinformatics</text></g>
+<g class="fade" style="animation-delay:3.64s"><text x="40.8" y="188" fill="#B24A1C" textLength="67.2" lengthAdjust="spacing" >research</text><text x="124.80000000000001" y="188" fill="#161616" textLength="428.4" lengthAdjust="spacing" >machine learning · biomedical AI · decision systems</text></g>
+<g class="fade" style="animation-delay:3.89s"><text x="40.8" y="208" fill="#B24A1C" textLength="42.0" lengthAdjust="spacing" >focus</text><text x="124.80000000000001" y="208" fill="#161616" textLength="394.8" lengthAdjust="spacing" >LLM apps · RAG systems · backend · data systems</text></g>
+<g class="fade" style="animation-delay:4.14s"><text x="40.8" y="228" fill="#B24A1C" textLength="58.8" lengthAdjust="spacing" >shipped</text><text x="124.80000000000001" y="228" fill="#161616" textLength="386.4" lengthAdjust="spacing" >AlphaZoom · Ashlar Law · TERI SAS · IIIT Delhi</text></g>
+<g class="fade" style="animation-delay:4.39s"><text x="40.8" y="248" fill="#B24A1C" textLength="50.4" lengthAdjust="spacing" >status</text><text x="124.80000000000001" y="248" fill="#2F7D3A" textLength="285.6" lengthAdjust="spacing" >open to SWE / AI engineering roles</text></g>
+<g class="fade" style="animation-delay:4.94s"><text x="24" y="274" fill="#FA692E" textLength="8.4" lengthAdjust="spacing" >$</text></g>
+<rect class="blink" x="40.8" y="261" width="8.4" height="17" fill="#FA692E" style="animation-delay:4.94s,4.94s"/>
+</g>
+</svg>

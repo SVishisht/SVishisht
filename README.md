@@ -1,195 +1,147 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.gif">
+  <img alt="Vishisht Singhal: software engineer building LLM systems, RAG pipelines and reliable backends" src="assets/hero-light.gif" width="100%">
+</picture>
 
-# Vishisht Singhal
+<p align="center">
+  <a href="https://linkedin.com/in/vishisht-singhal"><img src="https://img.shields.io/badge/linkedin-vishisht--singhal-FA692E?style=flat-square&labelColor=161616" alt="LinkedIn" /></a>
+  <a href="mailto:viosinghal04@gmail.com"><img src="https://img.shields.io/badge/email-viosinghal04%40gmail.com-FA692E?style=flat-square&labelColor=161616" alt="Email" /></a>
+  <img src="https://img.shields.io/badge/status-open_to_SWE_%2F_AI_roles-FA692E?style=flat-square&labelColor=161616" alt="Open to SWE / AI roles" />
+</p>
 
-**Computer Science Engineering @ VIT Vellore**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/h-about-dark.png">
+  <img alt="01 about" src="assets/h-about-light.png" width="100%">
+</picture>
 
-Software Engineering · AI/ML · LLM Systems · Full-Stack Development
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-dark.svg">
+  <img alt="Terminal: final-year CSE student at VIT Vellore (bioinformatics), focused on LLM apps, RAG, backend and data systems; open to SWE / AI engineering roles" src="assets/terminal-light.svg" width="100%">
+</picture>
 
-<a href="https://linkedin.com/in/vishisht-singhal">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" />
-</a>
-&nbsp;
-<a href="mailto:viosinghal04@gmail.com">
-  <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" />
-</a>
+I'm a final-year Computer Science Engineering student at VIT Vellore, specializing in Bioinformatics. Most of my work is in **software engineering and applied AI**: LLM applications, RAG systems, backend development and data-driven systems. I've also done research in machine learning, biomedical AI and decision systems.
 
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/h-experience-dark.png">
+  <img alt="02 experience" src="assets/h-experience-light.png" width="100%">
+</picture>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.png">
+  <img alt="Experience: AlphaZoom (Founding Engineer, Jul–Sep 2026), Ashlar Law (SDE Intern, May–Jun 2026), TERI SAS (ML & Decision Systems Research Intern, Dec 2025–Feb 2026), IIIT Delhi (AI Research Intern, May–Jun 2025)" src="assets/timeline-light.png" width="100%">
+</picture>
 
-## About
+<details>
+<summary><b>AlphaZoom</b> · Founding Engineer · <i>Jul – Sep 2026 · stealth-mode startup</i></summary>
+<br>
 
-I'm a final-year Computer Science Engineering student at VIT Vellore, specializing in Bioinformatics.
+B2B SaaS platform for **Generative Engine Optimization**.
 
-Most of my work has been around software engineering and applied AI, particularly LLM applications, RAG systems, backend development and data-driven systems.
-
-I've also worked on research projects involving machine learning, biomedical AI and decision systems.
-
-Currently working on projects involving AI infrastructure, full-stack applications and LLM-based systems.
-
----
-
-## Experience
-
-**Founding Engineer — AlphaZoom**  
-*Jul 2026 – Sep 2026 · Stealth Mode Startup*
-
-Worked on a B2B SaaS platform for Generative Engine Optimization.
-
-Some of the systems I worked on included:
-
-- Multi-provider LLM pipelines using OpenAI, Gemini and Perplexity
-- Structured output validation and fallback generation
-- Prompt and brand-data versioned caching
+- Multi-provider LLM pipelines across OpenAI, Gemini and Perplexity
+- Structured-output validation and fallback generation
+- Prompt- and brand-data-versioned caching
 - Usage tracking and subscription limits
-- PostgreSQL/Supabase backend and Razorpay billing integration
+- PostgreSQL / Supabase backend and Razorpay billing integration
 
-`Next.js` `TypeScript` `Supabase` `PostgreSQL` `Razorpay`
+`Next.js` `TypeScript` `Supabase` `PostgreSQL` `Razorpay` · [storyboard →](storyboards/alphazoom/)
 
----
+</details>
 
-**Software Development Engineer Intern — Ashlar Law**  
-*May 2026 – Jun 2026*
+<details>
+<summary><b>Ashlar Law</b> · Software Development Engineer Intern · <i>May – Jun 2026</i></summary>
+<br>
 
-Worked on semantic search and RAG for querying legal documents, previous matters, regulatory material and published legal research.
+Semantic search and RAG for querying legal documents, previous matters, regulatory material and published legal research.
 
-`Python` `LangChain` `LLMs` `RAG` `Semantic Search`
+`Python` `LangChain` `LLMs` `RAG` `Semantic Search` · [storyboard →](storyboards/ashlar-law/)
 
+</details>
 
----
+<details>
+<summary><b>TERI SAS</b> · ML & Decision Systems Research Intern · <i>Dec 2025 – Feb 2026</i></summary>
+<br>
 
-**ML & Decision Systems Research Intern — TERI SAS**  
-*Dec 2025 – Feb 2026*
+MCDM + machine-learning framework for climate-risk decision making: expert-weighted criteria, Monte Carlo simulation and explainable ML.
 
-Worked on an MCDM + machine learning framework for climate-risk decision making, including expert-weighted criteria, Monte Carlo simulation and explainable ML.
+`Python` `XGBoost` `Random Forest` `SHAP` `MCDM` · [storyboard →](storyboards/teri/)
 
-`Python` `XGBoost` `Random Forest` `SHAP` `MCDM`
+</details>
 
+<details>
+<summary><b>IIIT Delhi</b> · AI Research Intern · <i>May – Jun 2025</i></summary>
+<br>
 
----
+Local biomedical RAG pipeline over biomedical databases, combining contextual retrieval, semantic search, FAISS, Llama2 and BioChatter.
 
-**AI Research Intern — IIIT Delhi**  
-*May 2025 – Jun 2025*
+`Python` `LangChain` `FAISS` `Llama2` `BioChatter` · [storyboard →](storyboards/iiitd/)
 
-Worked on a local biomedical RAG pipeline using biomedical databases, combining contextual retrieval, semantic search, FAISS, Llama2 and BioChatter.
+</details>
 
-`Python` `LangChain` `FAISS` `Llama2` `BioChatter`
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/h-projects-dark.png">
+  <img alt="03 projects" src="assets/h-projects-light.png" width="100%">
+</picture>
 
+<p align="center">
+  <a href="https://github.com/SVishisht/ShopSplain"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/project-shopsplain-dark.gif">
+    <img alt="ShopSplain: AI shopping assistant with a self-healing LLM gateway" src="assets/project-shopsplain-light.gif" width="49%">
+  </picture></a>
+  <a href="https://regulara.io"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/project-regulara-dark.gif">
+    <img alt="Regulara: EU DORA compliance platform turning vendor contracts into XBRL-CSV filings" src="assets/project-regulara-light.gif" width="49%">
+  </picture></a>
+</p>
 
----
+<details>
+<summary><b>How ShopSplain's gateway heals itself</b></summary>
+<br>
 
-## Projects
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/gateway-dark.svg">
+  <img alt="Animated diagram: provider A fails, the circuit breaker opens and traffic fails over to provider B" src="assets/gateway-light.svg" width="100%">
+</picture>
 
-### ShopSplain
+Requests route through a FastAPI gateway. When a provider starts failing, a Redis-backed circuit breaker opens and LiteLLM fails traffic over to a healthy provider. Health checks bring it back, and everything is exported to Prometheus.
 
-AI shopping assistant with a self-healing LLM gateway.
+</details>
 
-The backend handles provider routing, automatic failover, Redis-based circuit breaking, health checks and Prometheus monitoring. The Chrome extension extracts and normalizes product information.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/h-storyboards-dark.png">
+  <img alt="04 storyboards" src="assets/h-storyboards-light.png" width="100%">
+</picture>
 
-`Python` `FastAPI` `LiteLLM` `Redis` `Prometheus` `Docker`
+Some of my internship and research work lives in private repositories. These storyboards walk through the problem, approach and architecture **without exposing private code or data**.
 
-[View repository →](https://github.com/SVishisht/ShopSplain)
+<p align="center">
+  <a href="storyboards/alphazoom/"><img src="storyboards/alphazoom/overview.png" width="49%" alt="AlphaZoom storyboard" /></a>
+  <a href="storyboards/ashlar-law/"><img src="storyboards/ashlar-law/overview.png" width="49%" alt="Ashlar Law storyboard" /></a>
+  <a href="storyboards/teri/"><img src="storyboards/teri/overview.png" width="49%" alt="TERI SAS storyboard" /></a>
+  <a href="storyboards/iiitd/"><img src="storyboards/iiitd/overview.png" width="49%" alt="IIIT Delhi storyboard" /></a>
+</p>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/h-stack-dark.png">
+  <img alt="05 stack" src="assets/h-stack-light.png" width="100%">
+</picture>
 
-### Regulara
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.png">
+  <img alt="Stack. Languages: Python, TypeScript, JavaScript, C/C++, Java, HTML/CSS. AI/ML: LLMs, LangChain, RAG, semantic search, FAISS, Llama2, BioChatter, XGBoost, Random Forest, SHAP. Backend/web: Next.js, React, NestJS, FastAPI, PostgreSQL, pgvector, Supabase, Redis, BullMQ. Infra/APIs: OpenAI, Gemini, Perplexity, LiteLLM, Docker, GCP, Prometheus, Razorpay." src="assets/stack-light.png" width="100%">
+</picture>
 
-Full-stack platform for EU DORA compliance.
+<sub>**Also:** Machine Learning Specialization (Coursera, Andrew Ng) · Senior Core Member, Computer Society of India, VIT Vellore</sub>
 
-Worked on converting vendor contract PDFs into submission-ready XBRL-CSV filings, with page-level provenance, legal-entity verification and asynchronous processing pipelines.
+<br>
 
-`TypeScript` `NestJS` `React` `PostgreSQL` `pgvector` `GCP`
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.gif">
+  <img alt="Thanks for stopping by" src="assets/footer-light.gif" width="100%">
+</picture>
 
-[regulara.io →](https://regulara.io)
+<p align="center">
+  <a href="https://linkedin.com/in/vishisht-singhal"><img src="https://img.shields.io/badge/say_hi_on-linkedin-FA692E?style=flat-square&labelColor=161616" alt="LinkedIn" /></a>
+  <a href="mailto:viosinghal04@gmail.com"><img src="https://img.shields.io/badge/or-email-FA692E?style=flat-square&labelColor=161616" alt="Email" /></a>
+</p>
 
----
-
-## Internship Storyboards
-
-Some of my internship and research work lives in private repositories, so the code cannot be published here.
-
-I've put together short technical storyboards instead, focusing on the problem, approach, architecture and work involved without exposing private code or data.
-
-### Ashlar Law
-
-[![Ashlar Law](storyboards/ashlar-law/overview.png)](storyboards/ashlar-law/)
-
-### TERI SAS
-
-[![TERI SAS](storyboards/teri/overview.png)](storyboards/teri/)
-
-### IIIT Delhi
-
-[![IIIT Delhi](storyboards/iiitd/overview.png)](storyboards/iiitd/)
-
-### AlphaZoom
-
-[![AlphaZoom](storyboards/alphazoom/overview.png)](storyboards/alphazoom/)
-
----
-
-## Technologies
-
-**Languages**  
-Python · C/C++ · Java · JavaScript · TypeScript · HTML · CSS
-
-**AI / ML**  
-LLMs · LangChain · RAG · Semantic Search · FAISS · Llama2 · BioChatter · XGBoost · Random Forest · SHAP
-
-**Backend / Web**  
-Next.js · React · NestJS · FastAPI · PostgreSQL · pgvector · Supabase · Redis · BullMQ
-
-**AI / Infrastructure**  
-OpenAI · Gemini · Perplexity · LiteLLM · Docker · GCP · Prometheus · Razorpay
-
----
-
-## Writing
-
-I've also written on environmental, social and sustainability topics, with work published by the Yale Review of International Studies, The Nature of Cities and POP Press.
-
-- [Savita: An Unexpected Leader!](https://yris.yira.org/ymun/savita-an-unexpected-leader/)  
-  *Yale Review of International Studies · 2021*
-
-- [Green Recovery's Missing Piece: Engagement with Future World Leaders!](https://www.thenatureofcities.com/2021/01/31/green-recoverys-missing-piece-engagement-with-future-world-leaders/)  
-  *The Nature of Cities · 2021*
-
-- [Stunting Our Immediate Future: A Teenage Perspective on Covid-19 and Its Challenges](https://www.thenatureofcities.com/TNOC/2020/04/26/stunting-our-immediate-future-a-teenage-perspective-on-covid-19-and-its-challenges/)  
-  *The Nature of Cities · 2020*
-
-- [Green Recovery for Climate Change: For and By Us, the Future World Leaders!](https://thepopmovement.org/green-recovery-for-climate-change-for-and-by-us-the-future-world-leaders/)  
-  *POP Press · 2020*
-
----
-
-## Certifications
-
-- Machine Learning Specialization — Coursera, Andrew Ng
-- Google Project Management Professional Certificate — Coursera
-
----
-
-## Beyond Code
-
-Senior Core Member — Computer Society of India, VIT Vellore
-
-Senior Core Member — Dramatics Club, VIT Vellore
-
-Senior Core Member — Music Club, VIT Vellore
-
-2nd Prize — Acoustic Battle of Bands 2026, BITS Pilani Hyderabad
-
-Honorable Mention — Festember 2024, NIT Trichy
-
-UN Youth Representative — SDG Implementation Youth Forums
-
----
-
-<div align="center">
-
-<a href="https://linkedin.com/in/vishisht-singhal">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" />
-</a>
-
-</div>
+<p align="center"><sub>dithering via <a href="https://github.com/paper-design/shaders">paper shaders</a> · layout ideas from <a href="https://www.cult-ui.com/">Cult UI</a> · type: Geist Pixel</sub></p>

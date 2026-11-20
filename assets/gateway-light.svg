@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="320" viewBox="0 0 860 320">
+<style>
+  .t{font-family:Geist,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;fill:#161616}
+  .s{font-family:Geist,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:11px;fill:#6E6B64}
+  .m{font-family:'Geist Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:11px}
+  .h{font-family:Geist,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;fill:#FA692E;letter-spacing:.5px}
+  .pipe{fill:none;stroke:#DCD9D0;stroke-width:2}
+  .box{fill:#F3F1EB;stroke:#DCD9D0;stroke-width:1.5}
+</style>
+<!-- 8s scenario: 0-45% traffic -> A | A fails (503), breaker OPENS | 50-95% traffic fails over -> B | A recovers -->
+<rect x="0.5" y="0.5" width="859" height="319" rx="10" fill="#FBFAF7" stroke="#DCD9D0"/>
+
+<defs><filter id="glow" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<!-- pipes -->
+<path id="pA" class="pipe" d="M180,150 H580 C630,150 630,55 680,55"/>
+<path id="pB" class="pipe" d="M180,150 H580 C630,150 630,150 680,150"/>
+<path id="pC" class="pipe" d="M180,150 H580 C630,150 630,245 680,245" stroke-dasharray="4 4"/>
+
+<!-- packets to A (visible 0-45%) -->
+<g>
+  <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.44;0.45;0.99;1" dur="8s" repeatCount="indefinite"/>
+  <circle r="4" fill="#161616" filter="url(#glow)"><animateMotion dur="1.5s" begin="0.0s" repeatCount="indefinite"><mpath href="#pA"/></animateMotion></circle>
+  <circle r="4" fill="#161616" filter="url(#glow)"><animateMotion dur="1.5s" begin="0.3s" repeatCount="indefinite"><mpath href="#pA"/></animateMotion></circle>
+  <circle r="4" fill="#161616" filter="url(#glow)"><animateMotion dur="1.5s" begin="0.6s" repeatCount="indefinite"><mpath href="#pA"/></animateMotion></circle>
+  <circle r="4" fill="#161616" filter="url(#glow)"><animateMotion dur="1.5s" begin="0.9s" repeatCount="indefinite"><mpath href="#pA"/></animateMotion></circle>
+  <circle r="4" fill="#161616" filter="url(#glow)"><animateMotion dur="1.5s" begin="1.2s" repeatCount="indefinite"><mpath href="#pA"/></animateMotion></circle>
+</g>
+<!-- packets to B (visible 50-95%) -->
+<g opacity="0">
+  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5;0.51;0.94;0.95;1" dur="8s" repeatCount="indefinite"/>
+  <circle r="4" fill="#FA692E" filter="url(#glow)"><animateMotion dur="1.5s" begin="0.0s" repeatCount="indefinite"><mpath href="#pB"/></animateMotion></circle>
+  <circle r="4" fill="#FA692E" filter="url(#glow)"><animateMotion dur="1.5s" begin="0.3s" repeatCount="indefinite"><mpath href="#pB"/></animateMotion></circle>
+  <circle r="4" fill="#FA692E" filter="url(#glow)"><animateMotion dur="1.5s" begin="0.6s" repeatCount="indefinite"><mpath href="#pB"/></animateMotion></circle>
+  <circle r="4" fill="#FA692E" filter="url(#glow)"><animateMotion dur="1.5s" begin="0.9s" repeatCount="indefinite"><mpath href="#pB"/></animateMotion></circle>
+  <circle r="4" fill="#FA692E" filter="url(#glow)"><animateMotion dur="1.5s" begin="1.2s" repeatCount="indefinite"><mpath href="#pB"/></animateMotion></circle>
+</g>
+
+<!-- chrome extension -->
+<rect class="box" x="30" y="115" width="150" height="70" rx="8"/>
+<text class="t" x="105" y="145" text-anchor="middle" font-weight="600">Chrome extension</text>
+<text class="s" x="105" y="164" text-anchor="middle">extract · normalize</text>
+
+<!-- gateway -->
+<rect x="240" y="40" width="360" height="240" rx="10" fill="none" stroke="#FA692E" stroke-opacity=".5" stroke-dasharray="6 4"/>
+<text class="h" x="420" y="66" text-anchor="middle">SELF-HEALING LLM GATEWAY · FastAPI</text>
+
+<rect class="box" x="258" y="125" width="84" height="50" rx="6"/>
+<text class="t" x="300" y="155" text-anchor="middle">router</text>
+
+<rect class="box" x="360" y="125" width="116" height="50" rx="6"/>
+<text class="s" x="418" y="145" text-anchor="middle">circuit breaker</text>
+<text class="m" x="418" y="163" text-anchor="middle" fill="#2F7D3A">● CLOSED
+  <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.45;0.46;0.95;0.96;1" dur="8s" repeatCount="indefinite"/></text>
+<text class="m" x="418" y="163" text-anchor="middle" fill="#D1342B" opacity="0">● OPEN
+  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.45;0.46;0.95;0.96;1" dur="8s" repeatCount="indefinite"/></text>
+
+<rect class="box" x="494" y="125" width="88" height="50" rx="6"/>
+<text class="t" x="538" y="155" text-anchor="middle">LiteLLM</text>
+
+<text class="s" x="300" y="98" text-anchor="middle">Redis-backed state</text>
+<line x1="300" y1="104" x2="418" y2="125" stroke="#DCD9D0" stroke-dasharray="3 3"/>
+
+<!-- status log -->
+<text class="m" x="258" y="215" fill="#6E6B64">health  A ✓  B ✓  C ✓
+  <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.45;0.46;0.95;0.96;1" dur="8s" repeatCount="indefinite"/></text>
+<text class="m" x="258" y="215" fill="#D1342B" opacity="0">health  A ✗ 503 → failover to B
+  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.45;0.46;0.95;0.96;1" dur="8s" repeatCount="indefinite"/></text>
+<text class="m" x="258" y="240" fill="#6E6B64">/metrics ──► Prometheus</text>
+<text class="m" x="258" y="262" fill="#6E6B64">redis · docker</text>
+
+<!-- providers -->
+<rect class="box" x="680" y="30" width="150" height="50" rx="8">
+  <animate attributeName="stroke" values="#2F7D3A;#2F7D3A;#D1342B;#D1342B;#2F7D3A;#2F7D3A" keyTimes="0;0.45;0.46;0.95;0.96;1" dur="8s" repeatCount="indefinite"/>
+</rect>
+<text class="t" x="755" y="52" text-anchor="middle">provider A</text>
+<text class="m" x="755" y="69" text-anchor="middle" fill="#2F7D3A">200 OK
+  <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.45;0.46;0.95;0.96;1" dur="8s" repeatCount="indefinite"/></text>
+<text class="m" x="755" y="69" text-anchor="middle" fill="#D1342B" opacity="0">503 down
+  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.45;0.46;0.95;0.96;1" dur="8s" repeatCount="indefinite"/></text>
+
+<rect class="box" x="680" y="125" width="150" height="50" rx="8">
+  <animate attributeName="stroke" values="#DCD9D0;#DCD9D0;#2F7D3A;#2F7D3A;#DCD9D0;#DCD9D0" keyTimes="0;0.49;0.5;0.95;0.96;1" dur="8s" repeatCount="indefinite"/>
+</rect>
+<text class="t" x="755" y="147" text-anchor="middle">provider B</text>
+<text class="m" x="755" y="164" text-anchor="middle" fill="#6E6B64">standby
+  <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.49;0.5;0.95;0.96;1" dur="8s" repeatCount="indefinite"/></text>
+<text class="m" x="755" y="164" text-anchor="middle" fill="#2F7D3A" opacity="0">200 OK
+  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.49;0.5;0.95;0.96;1" dur="8s" repeatCount="indefinite"/></text>
+
+<rect class="box" x="680" y="220" width="150" height="50" rx="8"/>
+<text class="t" x="755" y="242" text-anchor="middle">provider C</text>
+<text class="m" x="755" y="259" text-anchor="middle" fill="#6E6B64">standby</text>
+</svg>
