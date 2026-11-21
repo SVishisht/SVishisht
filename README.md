@@ -53,7 +53,7 @@ B2B SaaS platform for **Generative Engine Optimization**.
 
 Semantic search and RAG for querying legal documents, previous matters, regulatory material and published legal research.
 
-`Python` `LangChain` `LLMs` `RAG` `Semantic Search` · [storyboard →](storyboards/ashlar-law/)
+`Python` `LangChain` `LLMs` `RAG` `Semantic Search`
 
 </details>
 
@@ -63,7 +63,7 @@ Semantic search and RAG for querying legal documents, previous matters, regulato
 
 MCDM + machine-learning framework for climate-risk decision making: expert-weighted criteria, Monte Carlo simulation and explainable ML.
 
-`Python` `XGBoost` `Random Forest` `SHAP` `MCDM` · [storyboard →](storyboards/teri/)
+`Python` `XGBoost` `Random Forest` `SHAP` `MCDM`
 
 </details>
 
@@ -73,7 +73,7 @@ MCDM + machine-learning framework for climate-risk decision making: expert-weigh
 
 Local biomedical RAG pipeline over biomedical databases, combining contextual retrieval, semantic search, FAISS, Llama2 and BioChatter.
 
-`Python` `LangChain` `FAISS` `Llama2` `BioChatter` · [storyboard →](storyboards/iiitd/)
+`Python` `LangChain` `FAISS` `Llama2` `BioChatter`
 
 </details>
 
@@ -83,6 +83,10 @@ Local biomedical RAG pipeline over biomedical databases, combining contextual re
 </picture>
 
 <p align="center">
+  <a href="https://github.com/SVishisht/MediaSentry"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/project-mediasentry-dark.gif">
+    <img alt="MediaSentry: C++ video-quality analyzer that flags blurry, dark, overexposed, black and frozen frames" src="assets/project-mediasentry-light.gif" width="49%">
+  </picture></a>
   <a href="https://github.com/SVishisht/ShopSplain"><picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/project-shopsplain-dark.gif">
     <img alt="ShopSplain: AI shopping assistant with a self-healing LLM gateway" src="assets/project-shopsplain-light.gif" width="49%">
@@ -92,6 +96,31 @@ Local biomedical RAG pipeline over biomedical databases, combining contextual re
     <img alt="Regulara: EU DORA compliance platform turning vendor contracts into XBRL-CSV filings" src="assets/project-regulara-light.gif" width="49%">
   </picture></a>
 </p>
+
+<details>
+<summary><b>How MediaSentry works</b></summary>
+<br>
+
+A local command-line tool: no camera, network service or account needed. It decodes a video with the FFmpeg libraries, measures sampled frames with OpenCV, classifies each one as `usable`, `blurry`, `underexposed`, `overexposed` or `black_frame`, finds frozen intervals, and writes a versioned JSON report (plus an optional static HTML timeline).
+
+```mermaid
+flowchart LR
+  F[video file] --> D[decode thread<br/>FFmpeg + sws_scale]
+  D -->|bounded queue| W[worker pool<br/>features + model]
+  W --> R[reorder by<br/>sample index]
+  R --> T[temporal stage<br/>freezes + segments]
+  T --> J[JSON / HTML report]
+  P[(Python training)] -. model.json .-> W
+```
+
+- **Model trained in Python, run natively in C++.** C++ inference matches scikit-learn to within 5.6e-16 across 265 test cases.
+- **Multi-threaded, bounded memory.** Decode thread, bounded queue, worker pool and reorder buffer; reports are identical for any thread count.
+- **Honest evaluation.** 0.99 accuracy on a held-out *synthetic* test set, then tested on real videos and photos with defects added at known times. Judging blur against neighbouring frames lifted real-clip frame accuracy from 0.42 to 1.00.
+- **Robust CLI.** Documented exit codes, atomic report writes, sanitizer-clean tests, CI on Linux and macOS.
+
+`C++17` `FFmpeg` `OpenCV` `Python` `scikit-learn` `CMake` `GoogleTest`
+
+</details>
 
 <details>
 <summary><b>How ShopSplain's gateway heals itself</b></summary>
@@ -114,11 +143,10 @@ Requests route through a FastAPI gateway. When a provider starts failing, a Redi
 Some of my internship and research work lives in private repositories. These storyboards walk through the problem, approach and architecture **without exposing private code or data**.
 
 <p align="center">
-  <a href="storyboards/alphazoom/"><img src="storyboards/alphazoom/overview.png" width="49%" alt="AlphaZoom storyboard" /></a>
-  <a href="storyboards/ashlar-law/"><img src="storyboards/ashlar-law/overview.png" width="49%" alt="Ashlar Law storyboard" /></a>
-  <a href="storyboards/teri/"><img src="storyboards/teri/overview.png" width="49%" alt="TERI SAS storyboard" /></a>
-  <a href="storyboards/iiitd/"><img src="storyboards/iiitd/overview.png" width="49%" alt="IIIT Delhi storyboard" /></a>
+  <a href="storyboards/alphazoom/"><img src="storyboards/alphazoom/overview.png" width="70%" alt="AlphaZoom storyboard" /></a>
 </p>
+
+<p align="center"><sub>Ashlar Law, TERI SAS and IIIT Delhi storyboards coming soon.</sub></p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/h-stack-dark.png">
@@ -127,7 +155,7 @@ Some of my internship and research work lives in private repositories. These sto
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.png">
-  <img alt="Stack. Languages: Python, TypeScript, JavaScript, C/C++, Java, HTML/CSS. AI/ML: LLMs, LangChain, RAG, semantic search, FAISS, Llama2, BioChatter, XGBoost, Random Forest, SHAP. Backend/web: Next.js, React, NestJS, FastAPI, PostgreSQL, pgvector, Supabase, Redis, BullMQ. Infra/APIs: OpenAI, Gemini, Perplexity, LiteLLM, Docker, GCP, Prometheus, Razorpay." src="assets/stack-light.png" width="100%">
+  <img alt="Stack. Languages: Python, TypeScript, JavaScript, C/C++, Java, HTML/CSS. AI/ML: LLMs, LangChain, RAG, semantic search, FAISS, Llama2, BioChatter, scikit-learn, XGBoost, Random Forest, SHAP. Backend/web: Next.js, React, NestJS, FastAPI, PostgreSQL, pgvector, Supabase, Redis, BullMQ. Media/systems: FFmpeg, OpenCV, CMake, GoogleTest, multithreading. Infra/APIs: OpenAI, Gemini, Perplexity, LiteLLM, Docker, GCP, Prometheus, Razorpay." src="assets/stack-light.png" width="100%">
 </picture>
 
 <sub>**Also:** Machine Learning Specialization (Coursera, Andrew Ng) · Senior Core Member, Computer Society of India, VIT Vellore</sub>
